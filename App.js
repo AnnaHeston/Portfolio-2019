@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -81,6 +82,38 @@ const descriptions = [
   },
 ];
 
+const Backer = () => {
+  return (
+    <div className="backer" id="click-target">
+      <div className="center-circle">
+         <div className="text-container">
+          <h2 className="welcome-text">Enter</h2>
+         </div>
+      </div>
+    </div>
+  )
+}
+
+const Transparent = () => {
+  
+  const openClick = function() {
+    const target2 = document.getElementById("remove");
+    target2.classList.add("gone");
+    const target = document.getElementById("click-target");
+    target.classList.add("open");
+    
+  }
+
+  return (
+    <div className="transparent" id="remove" onClick={openClick}>
+          <div className="transparent-circle">
+           <div className="dot"></div>
+          </div>
+    </div>
+  )
+  
+}
+
 const Header = () => {
   return (
     <div className="header">
@@ -106,6 +139,8 @@ const Footer = (props) => {
 const App = (props) => {
   return (
     <div className="App">
+      < Backer />
+      < Transparent />
       < Header />
       <div className="experiences-container">
         { props.experiencesList.map( experience => 

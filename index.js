@@ -6,38 +6,38 @@ import * as serviceWorker from './serviceWorker';
 
 const experiences = [
   {
-    name: "WealthMeta.com",
+    name: "WealthMeta",
     style: "block-1",
     id:1,
   },
   {
-    name: "TualatinValley.org",
+    name: "Tualatin Valley",
     description1: "Used jQuery, HTML, and CSS to add responsive homepage carousel to existing website with specific client requests for slide transition, navigation, and lightbox behaviors",
     style: "block-2",
     id:2,
   },
   {
-    name: "ChaliceWealthPartners.com",
+    name: "Chalice Wealth Partners",
     style: "block-3",
     id:3,
   },
   {
-    name: "Protalus.com",
+    name: "Protalus",
     style: "block-4",
     id:4,
   },
   {
-    name: "JTWLLC.com",
+    name: "JTWLLC",
     style: "block-5",
     id:5,
   },
   {
-    name: "CapBuilder.net",
+    name: "CapBuilder",
     style: "block-6",
     id:6,
   },
   {
-    name: "HestonHomeDesign.com",
+    name: "Heston Home Design",
     style: "block-7",
     id:7,
   },
