@@ -87,8 +87,10 @@ const Backer = () => {
     <div className="backer" id="click-target">
       <div className="center-circle">
          <div className="text-container">
-          <h2 className="welcome-text">Enter</h2>
+          <h2 className="welcome-text">Anna Heston</h2>
+           <p className="enter">Enter</p>
          </div>
+
       </div>
     </div>
   )
@@ -96,19 +98,38 @@ const Backer = () => {
 
 const Transparent = () => {
   
+
+
+  return (
+    <div className="transparent" id="remove">
+          <div className="transparent-circle">
+           <div className="dot"></div>
+           <div className="dot3"></div> 
+           <div className="dot5"></div>
+          </div>
+    </div>
+  )
+  
+}
+
+const Transparent2 = () => {
+  
   const openClick = function() {
-    const target2 = document.getElementById("remove");
+    const target2 = document.getElementById("remove2");
     target2.classList.add("gone");
-    const target = document.getElementById("click-target");
-    target.classList.add("open");
+    const target = document.getElementById("remove");
+    target.classList.add("gone");
+    const target3 = document.getElementById("click-target");
+    target3.classList.add("open");
     
   }
 
   return (
-    <div className="transparent" id="remove" onClick={openClick}>
-          <div className="transparent-circle">
-           <div className="dot"></div>
-          </div>
+    <div className="transparent2" id="remove2" onClick={openClick}>
+      <div className="transparent-circle-2">
+         <div className="dot2"></div>
+         <div className="dot4"></div>
+       </div>
     </div>
   )
   
@@ -141,6 +162,7 @@ const App = (props) => {
     <div className="App">
       < Backer />
       < Transparent />
+      < Transparent2 />
       < Header />
       <div className="experiences-container">
         { props.experiencesList.map( experience => 

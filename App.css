@@ -24,13 +24,61 @@
   z-index: 6;
 }
 
+.transparent2 {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+}
+
 .dot{
   position:absolute;
-  top:0;
-  left:0;
+  top:490px;
+  left:490px;
+  width:25px;
+  height:25px;
+  background: #bee4b1;
+  border-radius:50%;
+}
+
+.dot2{
+  position:absolute;
+  top:530px;
+  left:530px;
   width:50px;
   height:50px;
-  background: #e1dee6;
+  background: #9ed78b;
+  border-radius:50%;
+}
+
+.dot3{
+  position:absolute;
+  top:600px;
+  left:600px;
+  width:75px;
+  height:75px;
+  background: #7eca64;
+  border-radius:50%;
+}
+
+.dot4{
+  position:absolute;
+  top:700px;
+  left:700px;
+  width:100px;
+  height:100px;
+  background: #5ebd3e;
+  border-radius:50%;
+}
+
+.dot5{
+  position:absolute;
+  top:825px;
+  left:825px;
+  width:125px;
+  height:125px;
+  background: #4b9731;
   border-radius:50%;
 }
 
@@ -46,12 +94,12 @@
 }
 
 .transparent-circle {
-  width: 250px;
-  height: 250px;
+  width: 900px;
+  height: 900px;
   border-radius: 50%;
   top: 50vh;
   position: relative;
-  margin-top: -125px;
+  margin-top: -450px;
   margin-left: auto;
   margin-right: auto;
   -webkit-animation-iteration-count:infinite;
@@ -60,12 +108,33 @@
   -webkit-animation-duration:5s;
 }
 
+.transparent-circle-2 {
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  top: 50vh;
+  position: relative;
+  margin-top: -450px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-name:back-orbit;
+  -webkit-animation-duration:5s;
+}
+
+
+
 .text-container {
   width: 250px;
   height: 250px;
-  display: flex;
+  padding-top: 96px;
   align-items: center;
   justify-content: center;
+}
+
+.enter {
+  color: #e1dee6;
 }
 
 .welcome-text {
@@ -196,10 +265,9 @@ a.footer-link:hover {
 }
 
 .gone {
-  width: 0;
-  height: 0;
+  display: none;
 }
-.gone .dot {
+.gone .dot, .gone .dot2, .gone .dot3, .gone .dot4, .gone .dot5 {
   display: none;
 }
 @keyframes open-in-keyframes {
@@ -220,6 +288,15 @@ a.footer-link:hover {
   }
   to {
     transform:rotate(360deg);
+  }
+}
+
+@keyframes back-orbit {
+  from {
+    transform:rotate(360deg);
+  }
+  to {
+    transform:rotate(0deg);
   }
 }
 
