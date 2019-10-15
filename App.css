@@ -4,8 +4,64 @@
   min-height: 100vh;
   position: relative;
   z-index: 2;
+  padding-bottom: 100px;
 }
 
+.modal-header {
+ background: #5ebd3e;
+ border: none;
+ color: #e1dee6;
+ padding: 2em 2em 1em;
+ font-family: Roboto, sans-serif;
+}
+
+.modal-body {
+  background: linear-gradient(#5ebd3e, #4b9731);
+  color: #e1dee6;
+  border: none;
+  padding: 0 2em;
+  font-family: Roboto, sans-serif;
+}
+
+.modal-body a {
+  color: #494c4e;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: Roboto, sans-serif;
+}
+
+.modal-footer {
+  background: #4b9731;
+  border: none;
+  padding: 1em 2em 2em;
+  font-family: Roboto, sans-serif;
+}
+
+.modal-footer .btn-primary {
+  background-color: #494c4e;
+  color: #e1dee6;
+  outline: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: Roboto, sans-serif;
+  font-style: italic;
+  border-color: none;
+}
+
+.modal-title {
+  color: #e1dee6;
+  border: 5px solid #e1dee6;
+  padding: 5px 10px;
+  font-family: Roboto, sans-serif;
+}
+
+.modal-content {
+  border-radius: 30px;
+  overflow: hidden;
+  border: none;
+  background: none;
+}
 
 .backer {
   position: absolute;
@@ -135,12 +191,14 @@
 
 .enter {
   color: #e1dee6;
+  font-family: Roboto, sans-serif;
 }
 
 .welcome-text {
   color: #e1dee6;
   border: 5px solid #e1dee6;
   padding: 5px 10px;
+  font-family: Roboto, sans-serif;
 }
 
 .header {
@@ -152,19 +210,58 @@ h1 {
   border: 5px solid #494c4e;
   display: inline-block;
   padding: 5px 10px;
+  font-family: Roboto, sans-serif;
 }
+
+@media (min-width: 320px) and (max-width: 500px) {
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 901px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
 
 .footer {
   background: #494c4e;
   margin-top: 50px;
   padding: 20px 0;
+  font-family: Roboto, sans-serif;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 a.footer-link {
   color: #e1dee6;
   display: inline-block;
   margin: 0 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
 }
+
+@media (min-width: 501px) and (max-width: 900px) {
+  a.footer-link {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 901px) {
+  a.footer-link {
+    font-size: 18px;
+  }
+}
+
 
 a.footer-link:hover {
   color: #fff;
@@ -174,8 +271,11 @@ a.footer-link:hover {
 .experiences-container {
   max-width: 800px;
   height: auto;
+  width: 80%;
   margin: 0 auto;
 }
+
+
 
 .experience-title {
   font-size: 18px;
@@ -183,14 +283,45 @@ a.footer-link:hover {
   display: inline-block;
   border-radius: 20px;
   padding: 5px 10px;
-  color: #494c4e;;
+  color: #494c4e;
+  font-family: Roboto, sans-serif;
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .experience-title {
+    padding: 2px 5px;
+    font-size: 7px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+  .experience-title {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 901px) {
+  .experience-title {
+    font-size: 18px;
+  }
 }
 
 
 .experience {
-  padding: 8% 0;
+  padding: 5% 0;
   cursor: pointer;
+  font-family: Roboto, sans-serif;
 }
+
+@media (min-width: 650px)  {
+  .experience {
+    padding: 8% 0;
+  }
+}
+
+
+
+
 
 .experience:hover, .experience:focus, .experience:active {
   opacity: .8;
@@ -216,6 +347,7 @@ a.footer-link:hover {
   width: 32%;
   margin-bottom: 2%;
   display: inline-block;
+  font-family: Roboto, sans-serif;
 }
 
 .block-3 {
@@ -225,6 +357,7 @@ a.footer-link:hover {
   margin-left: 2%;
   margin-bottom: 2%;
   display: inline-block;
+  font-family: Roboto, sans-serif;
 }
 
 .block-4 {
@@ -232,6 +365,7 @@ a.footer-link:hover {
   background-size: 100% auto;
   width: 100%;
   display: inline-block;
+  font-family: Roboto, sans-serif;
 }
 
 .block-5 {
@@ -241,6 +375,7 @@ a.footer-link:hover {
   margin-right: 2%;
   margin-top: 2%;
   display: inline-block;
+  font-family: Roboto, sans-serif;
 }
 
 .block-6 {
@@ -249,6 +384,7 @@ a.footer-link:hover {
   width: 32%;
   margin-top: 2%;
   display: inline-block;
+  font-family: Roboto, sans-serif;
 }
 
 .block-7 {
@@ -258,6 +394,7 @@ a.footer-link:hover {
   margin-left: 2%;
   margin-top: 2%;
   display: inline-block;
+  font-family: Roboto, sans-serif;
 }
 
 .open {

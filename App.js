@@ -34,12 +34,12 @@ function MyVerticallyCenteredModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header onClose={e => {this.onClose(e);}} closeButton>
+      <Modal.Header className="modal-header" onClose={e => {this.onClose(e);}} closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           {props.title}
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="modal-body">
         <p>{props.line1}</p>
         <p>{props.line2}</p>
         <p>{props.line3}</p>
@@ -48,9 +48,9 @@ function MyVerticallyCenteredModal(props) {
         <p>{props.line6}</p>
         <p>{props.line7}</p>
         <p>{props.line8}</p>
-        <a href={props.link}>Visit Page<a>
+        <a href={props.link}>Visit Page</a>
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer className="modal-footer">
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
