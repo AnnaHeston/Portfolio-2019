@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import ProfilePic from './profile_pic.JPG';
 
 
 
@@ -68,21 +69,6 @@ function MyVerticallyCenteredModal(props) {
 }
 
 
-
-
-
-
-const Header = () => {
-  return (
-    <div className="header">
-      <h1>Anna Heston</h1>
-    </div>
-  )
-}
-
-
-
-
 const Footer = (props) => {
   return (
       <a href={props.url} className="footer-link">{props.name}</a>
@@ -102,9 +88,24 @@ const App = (props) => {
   return (
     <div className="App">
       < Backer />
-    
-      < Header />
-      <div className="experiences-container">
+      
+     
+      <section className="portfolio-section-1">
+        <div className="hero-container">
+          <div className="image-side hero-half">
+            <img className="portrait" src={ProfilePic} />
+          </div>
+          <div className="text-side hero-half">
+            <div className="about-container">
+              <h1><strong>Anna Heston</strong></h1>
+              <h3>I am a front end developer living in Portland, Oregon. I love creating clean design and user-friendly experiences. Check out some of my latest work <a href="#portfolio" className="anchor-tag">below</a>.</h3>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      <section className="portfolio-section-2" id="portfolio">
+         <div className="experiences-container">
       
           <a href="#" className={`experience block-1`} onClick={() => setWealthMetaModal(true)}>
             <h2 className="experience-title">WealthMeta</h2>
@@ -118,13 +119,11 @@ const App = (props) => {
           <a href="#" className={`experience block-4`} onClick={() => setProtalusModal(true)}>
             <h2 className="experience-title">Protalus</h2>
           </a>
-          <a href="#" className={`experience block-5`} onClick={() => setJTWLLCModal(true)}>
-            <h2 className="experience-title">JTWLLC</h2>
-          </a>
-          <a href="#" className={`experience block-6`} onClick={() => setCapBuilderModal(true)}>
+         
+          <a href="#" className={`experience block-5`} onClick={() => setCapBuilderModal(true)}>
             <h2 className="experience-title">CapBuilder</h2>
           </a>
-          <a href="#" className={`experience block-7`} onClick={() => setHestonHomeDesignModal(true)}>
+          <a href="#" className={`experience block-6`} onClick={() => setHestonHomeDesignModal(true)}>
             <h2 className="experience-title">Heston Home Design</h2>
           </a>
          
@@ -209,6 +208,8 @@ const App = (props) => {
         />
  
       </div>
+      </section>
+     
       <div className="footer">
 
         { props.linksList.map( link =>

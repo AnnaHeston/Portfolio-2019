@@ -1,11 +1,50 @@
 .App {
   text-align: center;
-  background: #e1dee6;
+  background: #fffffa;
   min-height: 100vh;
   position: relative;
   z-index: 2;
-  padding-bottom: 100px;
+
 }
+
+.hero-container {
+  display: flex;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-half {
+  width: 100%;
+  min-width: 100%;
+}
+@media (min-width: 768px) {
+  .hero-half {
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+
+  }
+}
+
+.portrait {
+  max-width: 100%;
+}
+
+.text-side {
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anchor-tag {
+  color: #fbd3b8;
+}
+
+.anchor-tag:hover {
+  color: #273c2c;
+}
+
 
 .modal-header {
  background: #5ebd3e;
@@ -37,6 +76,7 @@
   padding: 1em 2em 2em;
   font-family: Roboto, sans-serif;
 }
+
 
 .modal-footer .btn-primary {
   background-color: #494c4e;
@@ -111,16 +151,10 @@
   font-family: 'Raleway', sans-serif;
 }
 
-.header {
-  padding: 20px 0;
-}
 
 h1 {
-  color: #494c4e;
-  border: 5px solid #494c4e;
-  display: inline-block;
-  padding: 5px 10px;
-  font-family: Roboto, sans-serif;
+  color: #535a5d;
+  font-family: 'Raleway', sans-serif;
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
@@ -144,10 +178,8 @@ h1 {
 
 .footer {
   background: #494c4e;
-  margin-top: 50px;
   padding: 20px 0;
   font-family: Roboto, sans-serif;
-  position: absolute;
   width: 100%;
   bottom: 0;
 }
@@ -178,39 +210,28 @@ a.footer-link:hover {
 }
 
 
-.experiences-container {
-  max-width: 800px;
-  height: auto;
-  width: 80%;
-  margin: 0 auto;
+a:hover {
+  text-decoration: none;
 }
-
 
 
 .experience-title {
   font-size: 18px;
-  background: rgba(225,222,230,.9);
-  display: inline-block;
-  border-radius: 20px;
+  background: #535a5d;
   padding: 5px 10px;
-  color: #494c4e;
+  color: #fffffa;
   font-family: Roboto, sans-serif;
 }
 
-@media (min-width: 320px) and (max-width: 500px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .experience-title {
     padding: 2px 5px;
     font-size: 7px;
   }
 }
 
-@media (min-width: 501px) and (max-width: 900px) {
-  .experience-title {
-    font-size: 10px;
-  }
-}
 
-@media (min-width: 901px) {
+@media (min-width: 768px) {
   .experience-title {
     font-size: 18px;
   }
@@ -242,70 +263,37 @@ a.footer-link:hover {
   color: #e1dee6;
 }
 
-.block-1 {
-  background-image: url(./ah-block-1.jpg);
-  background-size: 100% auto;
-  width: 32%;
-  margin-right: 2%;
-  margin-bottom: 2%;
+.block-1, .block-3, .block-5 {
+  background: #fbd3b8;
+  width: 33.33%;
+  padding: 3em;
   display: inline-block;
+  max-height: 50vh;
+  min-height: 50vh;
 }
 
-.block-2 {
-  background-image: url(./ah-block-2.jpg);
-  background-size: 100% auto;
-  width: 32%;
-  margin-bottom: 2%;
-  display: inline-block;
-  font-family: Roboto, sans-serif;
-}
-
-.block-3 {
-  background-image: url(./ah-block-3.jpg);
-  background-size: 100% auto;
-  width: 32%;
-  margin-left: 2%;
-  margin-bottom: 2%;
-  display: inline-block;
-  font-family: Roboto, sans-serif;
-}
-
-.block-4 {
-  background-image: url(./ah-block-4.jpg);
-  background-size: 100% auto;
+.block-2, .block-4, .block-6 {
+  background: #fffffa;
   width: 100%;
+  padding: 3em;
   display: inline-block;
-  font-family: Roboto, sans-serif;
+  max-height: 50vh;
+  min-height: 50vh;
 }
 
-.block-5 {
-  background-image: url(./ah-block-5.jpg);
-  background-size: 100% auto;
-  width: 32%;
-  margin-right: 2%;
-  margin-top: 2%;
-  display: inline-block;
-  font-family: Roboto, sans-serif;
+@media(min-width: 550px) and (max-width: 767px) {
+  .block-2, .block-4, .block-6 {
+    width: 50%;
+  }
 }
 
-.block-6 {
-  background-image: url(./ah-block-6.jpg);
-  background-size: 100% auto;
-  width: 32%;
-  margin-top: 2%;
-  display: inline-block;
-  font-family: Roboto, sans-serif;
+@media(min-width: 768px) {
+  .block-2, .block-4, .block-6 {
+    width: 33.333333%;
+  }
 }
 
-.block-7 {
-  background-image: url(./ah-block-7.jpg);
-  background-size: 100% auto;
-  width: 32%;
-  margin-left: 2%;
-  margin-top: 2%;
-  display: inline-block;
-  font-family: Roboto, sans-serif;
-}
+
 
 .open {
   animation: open-in-keyframes 1s forwards;
