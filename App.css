@@ -26,6 +26,14 @@
   }
 }
 
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
 .portrait {
   max-width: 100%;
 }
@@ -38,7 +46,7 @@
 }
 
 .anchor-tag {
-  color: #fbd3b8;
+  color: #ff5851;
 }
 
 .anchor-tag:hover {
@@ -47,53 +55,57 @@
 
 
 .modal-header {
- background: #5ebd3e;
+ background: #535a5d;
  border: none;
- color: #e1dee6;
+ color: #FFFFFA;
  padding: 2em 2em 1em;
- font-family: Roboto, sans-serif;
+ font-family: 'Raleway', sans-serif;
 }
 
 .modal-body {
-  background: linear-gradient(#5ebd3e, #4b9731);
-  color: #e1dee6;
+
+  background: #535a5d;
+  color: #FFFFFA;
   border: none;
   padding: 0 2em;
-  font-family: Roboto, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .modal-body a {
-  color: #494c4e;
+  color: #fbd3b8;
   font-style: italic;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: Roboto, sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+.close {
+  color: #fffffa;
 }
 
 .modal-footer {
-  background: #4b9731;
+  background: #535a5d;
   border: none;
   padding: 1em 2em 2em;
-  font-family: Roboto, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 
 .modal-footer .btn-primary {
-  background-color: #494c4e;
-  color: #e1dee6;
+  background-color: #748b75;
+  color: #fffffa;
   outline: 0;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: Roboto, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-style: italic;
-  border-color: none;
+  border-color: #fffffa;
 }
 
 .modal-title {
   color: #e1dee6;
-  border: 5px solid #e1dee6;
   padding: 5px 10px;
-  font-family: Roboto, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .modal-content {
@@ -112,7 +124,6 @@
   z-index: 5;
   clip-path: circle(100.0% at 50% 50%);
 }
-
 
 
 
@@ -175,11 +186,10 @@ h1 {
   }
 }
 
-
 .footer {
-  background: #494c4e;
+  background: #535851;
   padding: 20px 0;
-  font-family: Roboto, sans-serif;
+  font-family: 'Raleway', sans-serif;;
   width: 100%;
   bottom: 0;
 }
@@ -188,7 +198,7 @@ a.footer-link {
   color: #e1dee6;
   display: inline-block;
   margin: 0 20px;
-  font-family: Roboto, sans-serif;
+  font-family: 'Raleway', sans-serif;;
   font-size: 10px;
 }
 
@@ -214,13 +224,20 @@ a:hover {
   text-decoration: none;
 }
 
+.truncated-description {
+  background: #535a5d;
+  padding: 10px;
+  color: #fffffa;
+}
+
+
 
 .experience-title {
   font-size: 18px;
   background: #535a5d;
   padding: 5px 10px;
   color: #fffffa;
-  font-family: Roboto, sans-serif;
+  font-family: 'Raleway', sans-serif;;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -241,7 +258,7 @@ a:hover {
 .experience {
   padding: 5% 0;
   cursor: pointer;
-  font-family: Roboto, sans-serif;
+  font-family: 'Raleway', sans-serif;;
 }
 
 @media (min-width: 650px)  {
@@ -264,7 +281,7 @@ a:hover {
 }
 
 .block-1, .block-3, .block-5 {
-  background: #fbd3b8;
+  background: #ff5851;
   width: 33.33%;
   padding: 3em;
   display: inline-block;

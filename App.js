@@ -1,10 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import ProfilePic from './profile_pic.JPG';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 
 
@@ -81,7 +82,6 @@ const App = (props) => {
   const [tualatinValleyModal, setTualatinValleyModal] = React.useState(false);
   const [chaliceWealthPartnersModal, setChaliceWealthPartnersModal] = React.useState(false);
   const [protalusModal, setProtalusModal] = React.useState(false);
-  const [jTWLLCModal, setJTWLLCModal] = React.useState(false);
   const [capBuilderModal, setCapBuilderModal] = React.useState(false);
   const [hestonHomeDesignModal, setHestonHomeDesignModal] = React.useState(false);
 
@@ -93,7 +93,7 @@ const App = (props) => {
       <section className="portfolio-section-1">
         <div className="hero-container">
           <div className="image-side hero-half">
-            <img className="portrait" src={ProfilePic} />
+            <img className="portrait" src={ProfilePic} alt="Anna Heston Profile Pic"/>
           </div>
           <div className="text-side hero-half">
             <div className="about-container">
@@ -106,26 +106,61 @@ const App = (props) => {
       </section>
       <section className="portfolio-section-2" id="portfolio">
          <div className="experiences-container">
-      
-          <a href="#" className={`experience block-1`} onClick={() => setWealthMetaModal(true)}>
-            <h2 className="experience-title">WealthMeta</h2>
-          </a>
-          <a href="#" className={`experience block-2`} onClick={() => setTualatinValleyModal(true)}>
-            <h2 className="experience-title">Tualatin Valley</h2>
-          </a>
-          <a href="#" className={`experience block-3`} onClick={() => setChaliceWealthPartnersModal(true)}>
-            <h2 className="experience-title">Chalice Wealth Partners</h2>
-          </a>
-          <a href="#" className={`experience block-4`} onClick={() => setProtalusModal(true)}>
-            <h2 className="experience-title">Protalus</h2>
-          </a>
-         
-          <a href="#" className={`experience block-5`} onClick={() => setCapBuilderModal(true)}>
-            <h2 className="experience-title">CapBuilder</h2>
-          </a>
-          <a href="#" className={`experience block-6`} onClick={() => setHestonHomeDesignModal(true)}>
-            <h2 className="experience-title">Heston Home Design</h2>
-          </a>
+         <Row>
+          <Col xs={12} md={4} className={`experience block-1`} onClick={() => setWealthMetaModal(true)}>
+            <div>
+              <h2 className="experience-title">WealthMeta</h2>
+              <div className="truncated-description">
+                <p className="description-start">Angular2 and TypeScript to wire up front end on all calculators and wealth management&nbsp;tools...</p>
+              </div>
+            </div>
+          </Col>
+          <Col xs={12} md={4} className={`experience block-2`} onClick={() => setTualatinValleyModal(true)}>
+            <div>
+              <h2 className="experience-title">Tualatin Valley</h2>
+              <div className="truncated-description">
+                <p className="description-star">Used jQuery, HTML, and CSS to add responsive homepage carousel to existing website&nbsp;with...</p>
+              </div>
+            </div>
+          </Col>
+          <Col xs={12} md={4} className={`experience block-3`} onClick={() => setChaliceWealthPartnersModal(true)}>
+            <div>
+              <h2 className="experience-title">Chalice Wealth Partners</h2>
+              <div className="truncated-description">
+                <p className="description-start">Given Photoshop design files for desktop views, used HTML, SCSS, Bootstrap, and jQuery&nbsp;to...</p>
+              </div>
+            </div>
+          </Col>
+
+         </Row>
+         <Row>
+          <Col xs={12} md={4} className={`experience block-4`} onClick={() => setProtalusModal(true)}>
+            <div>
+              <h2 className="experience-title">Protalus</h2>
+              <div className="truncated-description">
+                <p className="description-start">Work with a small development team to build out and maintain ecommerce site on custom&nbsp;Shopify...</p>
+              </div>
+            </div>
+          </Col>
+          <Col xs={12} md={4} className={`experience block-5`} onClick={() => setCapBuilderModal(true)}>
+            <div>
+              <h2 className="experience-title">CapBuilder</h2>
+              <div className="truncated-description">
+                <p className="description-start">Used Backpack for Laravel and MySQL to update the database and the content&nbsp;administration...</p>
+              </div>
+
+            </div>
+          </Col>
+          <Col xs={12} md={4} className={`experience block-6`} onClick={() => setHestonHomeDesignModal(true)}>
+            <div>
+              <h2 className="experience-title">Heston Home Design</h2>
+              <div className="truncated-description">
+                <p className="description-start">Example WordPress site made with Tesseract&nbsp;theme...</p>
+              </div>
+            </div>
+          </Col>
+         </Row>
+          
          
       
         
@@ -179,14 +214,7 @@ const App = (props) => {
           link="https://www.protalus.com/"
           key = "4"
         />
-        <MyVerticallyCenteredModal
-          show={jTWLLCModal}
-          onHide={() => setJTWLLCModal(false)}
-          title= "JTWLLC"
-          line1= "&bull; Rebranded existing WordPress site with complicated theme and provided solutions to UI and responsive behavior issues"
-          link="http://jtwllc.com/"
-          key = "5"
-        />
+        
         <MyVerticallyCenteredModal
           show={capBuilderModal}
           onHide={() => setCapBuilderModal(false)}
