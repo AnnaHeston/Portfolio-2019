@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap';
 import ProfilePic from './profile_pic.JPG';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container'
 
 
 
@@ -13,27 +14,6 @@ import Row from 'react-bootstrap/Row';
 
 
 
-const Backer = () => {
-  const openClick = function() {
-    
-    const target = document.getElementById("click-target");
-    target.classList.add("open");
-    
-  }
-
-
-  return (
-    <div className="backer" id="click-target" onClick={openClick}>
-      <div className="center-circle">
-         <div className="text-container">
-          <h2 className="welcome-text">Anna Heston</h2>
-           <p className="enter">Enter</p>
-         </div>
-
-      </div>
-    </div>
-  )
-}
 
 function MyVerticallyCenteredModal(props) {
 
@@ -68,9 +48,49 @@ function MyVerticallyCenteredModal(props) {
   
   
 }
+class Header extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {black: true};
 
+    
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    let navButton = document.getElementsByClassName("pinkButton");
+    let i;
+    for (i = 0; i < navButton.length; i++) {
+      navButton[i].classList.remove('pinkButton');
+      navButton[i].classList.add('blackButton');
+    }
+    this.setState({black: !this.state.black})
+  }
+  render() {
+    let btn_class = this.state.black ? "blackButton" : "pinkButton";
+    return (
+        <div className="header">
+          <Container className="sticky-nav">
+            <Col xs={6} md={4} className="name-title">
+              <h3 className="main-name">Anna Heston</h3>
+              <p>Front End Developer</p>
+            </Col>
+            <Col xs={6} md={8} className="desktop-menu">
+              <a className={btn_class} href="#home" onClick={this.handleClick.bind(this)}><p>Home</p></a>
+              <a className={btn_class} href="#about" onClick={this.handleClick.bind(this)}><p>About</p></a>
+              <a className={btn_class} href="#portfolio" onClick={this.handleClick.bind(this)}><p>Portfolio</p></a>
+              <a className={btn_class} href="#contact" onClick={this.handleClick.bind(this)}><p>Contact</p></a>
+            </Col>
+          </Container>
+        </div>
+
+    );
+  }
+}
 
 const Footer = (props) => {
+
   return (
       <a href={props.url} className="footer-link">{props.name}</a>
   )
@@ -87,10 +107,10 @@ const App = (props) => {
 
   return (
     <div className="App">
-      < Backer />
-      
      
-      <section className="portfolio-section-1">
+      <Header />
+     
+      <section className="portfolio-section-1" id="about">
         <div className="hero-container">
           <div className="image-side hero-half">
             <img className="portrait" src={ProfilePic} alt="Anna Heston Profile Pic"/>
@@ -238,7 +258,7 @@ const App = (props) => {
       </div>
       </section>
      
-      <div className="footer">
+      <div className="footer" id="contact">
 
         { props.linksList.map( link =>
           < Footer 
