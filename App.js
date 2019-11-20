@@ -52,23 +52,19 @@ class Header extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = {black: true};
-
-    
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      activeItem: -1,
+      items: ['Home', 'About', 'Portfolio', 'Contact'],
+    }
   }
 
-  handleClick() {
-    let navButton = document.getElementsByClassName("pinkButton");
-    let i;
-    for (i = 0; i < navButton.length; i++) {
-      navButton[i].classList.remove('pinkButton');
-      navButton[i].classList.add('blackButton');
-    }
-    this.setState({black: !this.state.black})
+  handleItemClick(index) {
+    this.setState({
+      activeItem: index,
+    })
   }
   render() {
-    let btn_class = this.state.black ? "blackButton" : "pinkButton";
+    
     return (
         <div className="header">
           <Container className="sticky-nav">
@@ -77,10 +73,20 @@ class Header extends React.Component {
               <p>Front End Developer</p>
             </Col>
             <Col xs={6} md={8} className="desktop-menu">
-              <a className={btn_class} href="#home" onClick={this.handleClick.bind(this)}><p>Home</p></a>
-              <a className={btn_class} href="#about" onClick={this.handleClick.bind(this)}><p>About</p></a>
-              <a className={btn_class} href="#portfolio" onClick={this.handleClick.bind(this)}><p>Portfolio</p></a>
-              <a className={btn_class} href="#contact" onClick={this.handleClick.bind(this)}><p>Contact</p></a>
+              <ul className='bread list-inline'>
+                {this.state.items.map((item, index) =>
+                  <li
+                    
+                    
+                  ><a href={"#" + item}
+                    key={index}
+                    className={this.state.activeItem === index ? 'navigation--active' : ''}
+                    onClick={this.handleItemClick.bind(this, index)}>
+                    {item}
+                    </a>
+                  </li>
+                )}
+              </ul>
             </Col>
           </Container>
         </div>
@@ -109,8 +115,13 @@ const App = (props) => {
     <div className="App">
      
       <Header />
-     
-      <section className="portfolio-section-1" id="about">
+      <section className="portfolio-section-1 clearfix" id="Home">
+        <div className="iframe-wrapper">
+           <iframe src="https://player.vimeo.com/video/374335537?autoplay=1&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+       
+      </section>
+      <section className="portfolio-section-2 clearfix" id="About">
         <div className="hero-container">
           <div className="image-side hero-half">
             <img className="portrait" src={ProfilePic} alt="Anna Heston Profile Pic"/>
@@ -124,7 +135,8 @@ const App = (props) => {
           </div>
         </div>
       </section>
-      <section className="portfolio-section-2" id="portfolio">
+     
+      <section className="portfolio-section-3" id="Portfolio">
          <div className="experiences-container">
          <Row>
           <Col xs={12} md={4} className={`experience block-1`} onClick={() => setWealthMetaModal(true)}>
@@ -258,7 +270,7 @@ const App = (props) => {
       </div>
       </section>
      
-      <div className="footer" id="contact">
+      <div className="footer" id="Contact">
 
         { props.linksList.map( link =>
           < Footer 
