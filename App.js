@@ -119,6 +119,7 @@ const App = (props) => {
         <div className="iframe-wrapper">
            <iframe src="https://player.vimeo.com/video/374335537?autoplay=1&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
+        <h2 className="tag-line"><strong>Engaging. Purposeful. Creative.</strong></h2>
        
       </section>
       <section className="portfolio-section-2 clearfix" id="About">
