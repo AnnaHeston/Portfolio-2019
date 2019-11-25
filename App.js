@@ -38,9 +38,10 @@ function MyVerticallyCenteredModal(props) {
         <p>{props.line6}</p>
         <p>{props.line7}</p>
         <p>{props.line8}</p>
-        <a href={props.link}>Visit Page</a>
+        
       </Modal.Body>
       <Modal.Footer className="modal-footer">
+        <a href={props.link}>Visit Page</a>
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
@@ -122,6 +123,9 @@ const App = (props) => {
         <h2 className="tag-line"><strong>Engaging. Purposeful. Creative.</strong></h2>
        
       </section>
+      <section className="divider">
+        <p className="quote"><strong>“The craft of programming begins with empathy, not formatting or languages or tools or algorithms or data structures.”&nbsp;-Anon</strong></p>
+      </section>
       <section className="portfolio-section-2 clearfix" id="About">
         <div className="hero-container">
           <div className="image-side hero-half">
@@ -130,66 +134,65 @@ const App = (props) => {
           <div className="text-side hero-half">
             <div className="about-container">
               <h1><strong>Anna Heston</strong></h1>
-              <h3>I am a front end developer living in Portland, Oregon. I love creating clean design and user-friendly experiences. Check out some of my latest work <a href="#portfolio" className="anchor-tag">below</a>.</h3>
+              <h3>I am a front end developer living in Portland, Oregon. I love creating client-centered, user-friendly experiences. Check out some of my latest work <a href="#Portfolio" className="anchor-tag">below</a>.</h3>
             </div>
             
           </div>
         </div>
       </section>
-     
+
       <section className="portfolio-section-3" id="Portfolio">
          <div className="experiences-container">
          <Row>
-          <Col xs={12} md={4} className={`experience block-1`} onClick={() => setWealthMetaModal(true)}>
-            <div>
-              <h2 className="experience-title">WealthMeta</h2>
-              <div className="truncated-description">
-                <p className="description-start">Angular2 and TypeScript to wire up front end on all calculators and wealth management&nbsp;tools...</p>
-              </div>
+          <Col xs={12} lg={4} className={`experience block-1`} onClick={() => setWealthMetaModal(true)}>
+            <div className="inner-container inner-container-1">
+            </div>
+            <h2 className="experience-title experience-title-1">WealthMeta</h2>
+            <div className="truncated-description">
+              <p className="description-start">Angular2 and TypeScript to wire up front end on all calculators and wealth management&nbsp;tools...</p>
             </div>
           </Col>
-          <Col xs={12} md={4} className={`experience block-2`} onClick={() => setTualatinValleyModal(true)}>
-            <div>
-              <h2 className="experience-title">Tualatin Valley</h2>
-              <div className="truncated-description">
-                <p className="description-star">Used jQuery, HTML, and CSS to add responsive homepage carousel to existing website&nbsp;with...</p>
-              </div>
+          <Col xs={12} lg={4} className={`experience block-2`} onClick={() => setTualatinValleyModal(true)}>
+            <div className="inner-container inner-container-2">
+            </div>
+            <h2 className="experience-title experience-title-2">Tualatin Valley</h2>
+            <div className="truncated-description">
+              <p className="description-star">Used jQuery, HTML, and CSS to add responsive homepage carousel to existing website&nbsp;with...</p>
             </div>
           </Col>
-          <Col xs={12} md={4} className={`experience block-3`} onClick={() => setChaliceWealthPartnersModal(true)}>
-            <div>
-              <h2 className="experience-title">Chalice Wealth Partners</h2>
-              <div className="truncated-description">
-                <p className="description-start">Given Photoshop design files for desktop views, used HTML, SCSS, Bootstrap, and jQuery&nbsp;to...</p>
-              </div>
+          <Col xs={12} lg={4} className={`experience block-3`} onClick={() => setChaliceWealthPartnersModal(true)}>
+            <div className="inner-container inner-container-3">
+            </div>
+            <h2 className="experience-title experience-title-3">Chalice Wealth Partners</h2>
+            <div className="truncated-description">
+              <p className="description-start">Given Photoshop design files for desktop views, used HTML, SCSS, Bootstrap, and jQuery&nbsp;to...</p>
             </div>
           </Col>
 
          </Row>
          <Row>
-          <Col xs={12} md={4} className={`experience block-4`} onClick={() => setProtalusModal(true)}>
-            <div>
-              <h2 className="experience-title">Protalus</h2>
-              <div className="truncated-description">
-                <p className="description-start">Work with a small development team to build out and maintain ecommerce site on custom&nbsp;Shopify...</p>
-              </div>
+          <Col xs={12} lg={4} className={`experience block-4`} onClick={() => setProtalusModal(true)}>
+            <div className="inner-container inner-container-4">  
+            </div>
+            <h2 className="experience-title experience-title-4">Protalus</h2>
+            <div className="truncated-description">
+              <p className="description-start">Work with a small development team to build out and maintain ecommerce site on custom&nbsp;Shopify...</p>
             </div>
           </Col>
-          <Col xs={12} md={4} className={`experience block-5`} onClick={() => setCapBuilderModal(true)}>
-            <div>
-              <h2 className="experience-title">CapBuilder</h2>
-              <div className="truncated-description">
-                <p className="description-start">Used Backpack for Laravel and MySQL to update the database and the content&nbsp;administration...</p>
-              </div>
-
+          <Col xs={12} lg={4} className={`experience block-5`} onClick={() => setCapBuilderModal(true)}>
+            <div className="inner-container inner-container-5">
+            </div>
+            <h2 className="experience-title experience-title-5">CapBuilder</h2>
+            <div className="truncated-description">
+              <p className="description-start">Used Backpack for Laravel and MySQL to update the database and the content&nbsp;administration...</p>
             </div>
           </Col>
-          <Col xs={12} md={4} className={`experience block-6`} onClick={() => setHestonHomeDesignModal(true)}>
-            <div>
-              <h2 className="experience-title">Heston Home Design</h2>
-              <div className="truncated-description">
-                <p className="description-start">Example WordPress site made with Tesseract&nbsp;theme...</p>
-              </div>
+          <Col xs={12} lg={4} className={`experience block-6`} onClick={() => setHestonHomeDesignModal(true)}>
+            <div className="inner-container inner-container-6">
+            </div>
+            <h2 className="experience-title experience-title-6">Heston Home Design</h2>
+            <div className="truncated-description">
+              <p className="description-start">Example WordPress site made with Tesseract&nbsp;theme...</p>
             </div>
           </Col>
          </Row>
