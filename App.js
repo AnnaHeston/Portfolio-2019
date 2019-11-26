@@ -127,22 +127,24 @@ const App = (props) => {
         <p className="quote"><strong>“The craft of programming begins with empathy, not formatting or languages or tools or algorithms or data structures.”&nbsp;-Anon</strong></p>
       </section>
       <section className="portfolio-section-2 clearfix" id="About">
-        <div className="hero-container">
-          <div className="image-side hero-half">
+        <div xs={12} md={6} className="hero-container">
+          <Col className="image-side hero-half">
             <img className="portrait" src={ProfilePic} alt="Anna Heston Profile Pic"/>
-          </div>
-          <div className="text-side hero-half">
+          </Col>
+          <Col xs={12} md={6} className="text-side hero-half">
             <div className="about-container">
-              <h1><strong>Anna Heston</strong></h1>
+              <h1 value="Anna Heston"></h1>
+              <h2 className="about-title"><strong>About.</strong></h2>
               <h3>I am a front end developer living in Portland, Oregon. I love creating client-centered, user-friendly experiences. Check out some of my latest work <a href="#Portfolio" className="anchor-tag">below</a>.</h3>
             </div>
             
-          </div>
+          </Col>
         </div>
       </section>
 
       <section className="portfolio-section-3" id="Portfolio">
          <div className="experiences-container">
+         <h2 className="portfolio-title"><strong>Portfolio.</strong></h2>
          <Row>
           <Col xs={12} lg={4} className={`experience block-1`} onClick={() => setWealthMetaModal(true)}>
             <div className="inner-container inner-container-1">
@@ -228,7 +230,7 @@ const App = (props) => {
         <MyVerticallyCenteredModal
           show={chaliceWealthPartnersModal}
           onHide={() => setChaliceWealthPartnersModal(false)}
-          title= "&bull; Chalice Wealth Partners"
+          title= "Chalice Wealth Partners"
           line1= "&bull; Given Photoshop design files for desktop views, used HTML, SCSS, Bootstrap, and jQuery to create a pixel perfect UI"
           line2= "&bull; Expanded design themes for mobile views when provided with wireframes only to make a fully responsive site across browsers" 
           line3= "&bull; Wired front end to content management system with Django"
